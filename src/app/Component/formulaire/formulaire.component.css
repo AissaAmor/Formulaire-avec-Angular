@@ -1,0 +1,20 @@
+.text{
+    font-size: 50px;
+    font-family: fantasy;
+    text-align: center;
+    color: rebeccapurple;
+}
+input {
+    width: 30%;
+    padding: 15px;
+    border: 1px solid blue;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    background: #f1f1f1;
+  }
+  p{
+      color: black;
+      font-size: 20px;
+  }
+
+  

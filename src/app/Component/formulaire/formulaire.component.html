@@ -1,0 +1,37 @@
+<!-- <p class="text">formulaire works!</p>
+<p>Username :</p><input id="username" type="text" placeholder="Username">
+<p>Votre Nom :</p><input id="nom" type="text" placeholder="Nom">
+<p>Votre Prénom :</p><input id="prenom" type="text" placeholder="Prénom"><br>
+<p>Email :</p><input id="email" type="email" placeholder="Adresse Email"><br> -->
+<!-- <p>Date de Naissance :</p><input id="date" type="date"><br>
+<p>Num de Télephone :</p><input id="num" type="number" placeholder="Num Télephone"><br>
+<p>votre mot de passe :</p><input id="pass" type="password" placeholder="Mot de passe"><br>
+<p>retaper mot de passe :</p><input id="cpassword" type="password" placeholder="Confirmation mot de passe"><br> -->
+<!--<input type="button" value="S'inscrire" onclick="register()"> -->
+<!-- <button class="bg dark">Valider</button> -->
+<h1> Remplir Formulaire</h1>
+<div>
+    <input [(ngModel)]="userName" />
+    <h1>{{username}}</h1>
+    <!-- <input [(ngModel)]="Nom" />
+    <h1>{{Nom}}</h1>
+    <input [(ngModel)]="Prenom" />
+    <h1>{{Prenom}}</h1>
+    <input [(ngModel)]="Email" />
+    <h1>{{Email}}</h1> -->
+    <input type="button" (click)="test()" value="Envoyer"> 
+</div>
+<!-- <form [(ngModel)]= "ngForm">
+  <input type = "text" name = "fullName" placeholder = "Your full name" ngModel><br/>
+  <p>Value: {{ fullname }}</p>
+  <input type="text" name = "Name" placeholder="Nom" ngModel><br>
+  <p>Value: {{ name }}</p>
+  <input type="text" name = "lastName "placeholder="Prénom" ngModel><br>
+  <p>Value: {{ lastname }}</p>
+  <input type = "email" name = "email" placeholder = "Your email" ngModel>
+  <br/>
+
+  <textarea name = "message" placeholder = "Your message" ngModel></textarea>
+  <br/>
+  <input type = "submit" value = "Send">
+</form> -->

@@ -1,0 +1,130 @@
+<!-- <form [formGroup]="registerForm"> -->
+<!-- (ngSubmit)="callingFunction()" -->
+<!-- <label>
+        First Name:
+        <input type="text" formControlName="firstName">
+    </label>
+    <label>
+        First Name:
+        <input type="text" formControlName="firstName"><br><br>
+    </label>
+    <label>
+        Last Name:
+        <input type="text" formControlName="lastName"><br><br>
+    </label>
+    <label>
+        Email:
+        <input type="email" formControlName="Email"><br><br>
+    </label>
+    <label>
+        Telephone:
+        <input type="text" formControlName="Telephone"><br><br>
+    </label>
+    <button type="button" (click)='test()'>Valider</button>
+</form> -->
+
+<!-- <button type="submit" (click)="test()">Submit</button> -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h3>Register</h3>
+      <form [formGroup]="registerForm">
+        <div class="form-group">
+          <label>First Name</label>
+          <input
+            type="text"
+            formControlName="firstName"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.firstName.errors }"
+          />
+          <div
+            *ngIf="submitted &amp;&amp; registerForm.controls.firstName.errors"
+            class="text-danger"
+          >
+            <div *ngIf="registerForm.controls.firstName.errors.required">
+              First Name is required
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input
+            type="text"
+            formControlName="lastName"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.lastName.errors }"
+          />
+          <div
+            *ngIf="submitted &amp;&amp; registerForm.controls.lastName.errors"
+            class="text-danger"
+          >
+            <div *ngIf="registerForm.controls.lastName.errors.required">
+              Last Name is required
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input
+            type="text"
+            formControlName="email"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.email.errors }"
+          />
+          <div
+            *ngIf="submitted &amp;&amp; registerForm.controls.email.errors"
+            class="text-danger"
+          >
+            <div *ngIf="registerForm.controls.email.errors.required">
+              Email is required
+            </div>
+            <div *ngIf="registerForm.controls.email.errors.email">
+              Email must be a valid email address
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Num ID</label>
+          <input type="text" formControlName="id" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label>telephone</label>
+          <input
+            type="text"
+            formControlName="telephone"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.telephone.errors }"
+          />
+          <div
+            *ngIf="submitted &amp;&amp; registerForm.controls.telephone.errors"
+            class="text-danger"
+          >
+            <div *ngIf="registerForm.controls.telephone.errors.required">
+              telephone is required
+            </div>
+            <div *ngIf="registerForm.controls.telephone.errors.minlength">
+              telephone must be at least 8 characters
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input
+            type="button"
+            [disabled]="registerForm.pristine || registerForm.is - invalid"
+            class="btn btn-success"
+            (click)="test()"
+            value="valider"
+          />
+          <!-- <input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.telephone.errors }"  />
+                    <div *ngIf="submitted &amp;&amp; registerForm.controls.telephone.err<ors" class="text-danger"> -->
+          <input
+            type="button"
+            class="btn btn-success"
+            (click)="clickID()"
+            value="click"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
